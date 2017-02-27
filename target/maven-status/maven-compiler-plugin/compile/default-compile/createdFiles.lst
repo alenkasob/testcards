@@ -1,0 +1,13 @@
+com\clients\Payload.class
+com\cards\CardType.class
+com\clients\Cursor.class
+com\cards\BuyerPhone.class
+com\cards\MyResponse.class
+com\cards\Payload.class
+com\cards\BuyerEmail.class
+com\clients\MyClients.class
+com\cards\JsonReader.class
+com\cards\SocialData.class
+com\cards\StorageData.class
+com\clients\List.class
+com\cards\BuyerProfile.class
