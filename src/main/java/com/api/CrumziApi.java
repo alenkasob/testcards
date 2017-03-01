@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface CrumziApi {
 
-    List<com.clients.List> getBuyerCards(String sessionToken) throws IOException;
+    List<com.clients.List> getBuyerCards(String sessionToken, long date_from, long date_to) throws IOException;
     Payload getInfoBuyCard(String cartId, String sessionToken) throws IOException;
 
 }

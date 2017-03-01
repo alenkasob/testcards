@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "card_type",
         "barcode",
         "barcode_type",
+        "seller_descr",
         "is_activated",
         "buyer_profile",
         "date_created",
@@ -33,6 +34,11 @@ public class Payload {
     private String barcode;
     @JsonProperty("barcode_type")
     private String barcode_type;
+
+
+
+    @JsonProperty("seller_descr")
+    private String seller_descr;
     @JsonProperty("is_activated")
     private boolean is_activated;
     @JsonProperty("buyer_profile")
@@ -60,16 +66,18 @@ public class Payload {
      * @param date_created
      * @param barcode
      * @param barcode_type
+     * @param seller_descr
      * @param card_type
      * @param date_changed
      */
-    public Payload(String id, String phone_number, CardType card_type, String barcode, String barcode_type, boolean is_activated, BuyerProfile buyer_profile, long date_created, long date_changed) {
+    public Payload(String id, String phone_number, CardType card_type, String barcode, String barcode_type, String seller_descr, boolean is_activated, BuyerProfile buyer_profile, long date_created, long date_changed) {
         super();
         this.id = id;
         this.phone_number = phone_number;
         this.card_type = card_type;
         this.barcode = barcode;
         this.barcode_type = barcode_type;
+        this.seller_descr = seller_descr;
         this.is_activated = is_activated;
         this.buyer_profile = buyer_profile;
         this.date_created = date_created;
@@ -141,6 +149,8 @@ public class Payload {
         return barcode_type;
     }
 
+
+
     @JsonProperty("barcode_type")
     public void setBarcode_type(String barcode_type) {
         this.barcode_type = barcode_type;
@@ -150,6 +160,14 @@ public class Payload {
         this.barcode_type = barcodeType;
         return this;
     }
+    public String getSeller_descr() {
+        return seller_descr;
+    }
+
+    public void setSeller_descr(String seller_descr) {
+        this.seller_descr = seller_descr;
+    }
+
 
     @JsonProperty("is_activated")
     public boolean isIsActivated() {
